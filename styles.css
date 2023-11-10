@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Sora', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 ul,
@@ -24,4 +24,164 @@ ul a,
 ol a {
     text-decoration: none;
     color: black;
+}
+
+/*Setup global variables*/
+:root {
+    --bkg-color: hsl(225, 100%, 94%);
+    --tag-bkg-color: hsl(225, 100%, 98%);
+    --btn-bkg-payment: hsl(245, 75%, 52%);
+    --text-color: hsl(224, 23%, 55%);
+    --card-bkg-color: #ffff; 
+}
+
+/*CARD CONTAINER*/
+.card-container {
+    width: 100%;
+    height: 95vh;
+    background-color: var(--bkg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border-radius: 1rem;
+    width: 90%;
+    height: fit-content;
+    background-color: var(--card-bkg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card > figure {
+    border-radius: 1rem;
+    width: 100%;
+    height: 40%;
+    display: flex;
+}
+
+.card > figure > img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card > h1 {
+    width: 100%;
+    margin-top: 1.25rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card > p {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.card__tag {
+    border-radius: 1rem;
+    width: 95%;
+    margin-top: 1rem;
+    padding: 0.85rem;
+    background-color: var(--tag-bkg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card__tag >  a {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.card__tag--plan {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.1rem;
+}
+
+
+.card__tag--plan > h3 {
+    font-size: 0.85rem;
+}
+
+.card__tag--plan > p {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.card > button:first-of-type {
+    border: none;
+    border-radius: 1rem;
+    width: 90%;
+    margin-top: 1rem;
+    padding: 0.90rem;
+    background-color: var(--btn-bkg-payment);
+}
+
+.card > button:first-of-type:hover {
+    box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.2);
+}
+
+.card > button:first-of-type > a {
+    color: var(--card-bkg-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.card > button:last-of-type {
+    border: none;
+    margin-top: 0.75rem;
+    margin-bottom: 1.15rem;
+    width: 90%;
+    padding: 0.5rem;
+    background-color:transparent;
+}
+
+.card > button:last-of-type > a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.92rem;
+    font-weight: 700;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--bkg-color);
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+footer > p > a {
+    text-decoration: none;
+}
+
+footer > p > a:visited {
+    color: var(--text-color);
 }
